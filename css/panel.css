@@ -1,0 +1,21 @@
+.include{
+  display: none;
+}
+.active{
+  display: block;
+}
+
+.container nav{
+  padding:5px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom:1px solid var(--blue-color)
+}
+
+.container{
+  width: 100%;
+}
+
+.includes{
+  margin:5px
+}

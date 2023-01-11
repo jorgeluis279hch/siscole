@@ -1,0 +1,33 @@
+@import url("/css/aside.css");
+@import url("./panel.css");
+@import url("./generalComponets.css");
+@import url("./operationPanel.css");
+:root{
+  --blue-color:#5092db;
+  --red-color:#f8a299;
+  --orange-color:#f7ce89;
+  --cyan-color:#afd4ff;
+  --dimcyan-color:#d4e8fe;
+  --black-color:#434242
+}
+
+
+
+body{
+  margin:0;
+  font-family: 'Nunito', sans-serif;
+}
+
+main {
+  display: flex;
+  
+}
+
+
+
+
+
+
+
+
+

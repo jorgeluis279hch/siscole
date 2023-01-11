@@ -1,0 +1,91 @@
+.barra {
+  height: 100vh;
+  width: 200px;
+  max-width: 300px;
+  border-right:1px solid var(--blue-color);
+  background-color: rgba(255, 255, 255, 0.92);
+  position: static;
+
+  transition: all .5s;
+}
+.barra.min{
+  position: relative;
+}
+/* CONTROL */
+
+.control{
+  text-align: end;
+  margin:0 15px;
+  cursor: pointer;
+}
+
+/* LOGO */
+.logo{
+  padding:10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.logo-img{
+  width: 50%;
+  object-fit: cover;
+  border-radius: 5in;
+}
+.logo-frase{
+  font-style: italic;
+  font-weight: lighter;
+}
+/* LINKS */
+.menu{
+  padding:0
+}
+
+.min {
+  width: 50px;
+}
+.min .menu-text,.min .logo-frase{
+  display: none
+}
+.min .logo-img{
+  width: 30px;
+}
+.menu-item{
+  font-weight: bolder;
+  text-decoration: none;
+  display: block;
+  padding:10px;
+  color:var(--black-color);
+  border:1px solid var(--blue-color);
+  margin:5px;
+  background-color: var(--dimcyan-color);
+  /* transition: background .5s linear; */
+}
+.menu-item:hover
+{
+  background: var(--cyan-color);
+}
+.menu-icon, .menu-text{
+  pointer-events: none;
+}
+.menu-icon{
+  margin:0 10px 0 0;
+}
+
+
+@media screen and (max-width:650px){
+  .barra{
+    position: absolute;
+  }
+  .barra.min{
+    position: relative;
+    width: 50px;
+  }
+  .min .menu-text, .min .logo-frase{
+    display: none
+  }
+
+  .min .logo-img{
+    width:30px
+  }
+}

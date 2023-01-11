@@ -1,0 +1,115 @@
+/* btns */
+button, input[type=button]{
+  font-family: 'Nunito', sans-serif;
+  color:var(--black-color);
+  border:1px solid var(--blue-color);
+  background-color: var(--dimcyan-color);
+  padding:5px 10px;
+  margin:0;
+  cursor: pointer;
+}
+button:hover, input[type=button]:hover
+{
+  background: var(--cyan-color);
+}
+
+li{
+  list-style: none;
+}
+h5
+{
+  margin: 10px 0px;
+}
+/* input text */
+.entrada{
+  --fontColor: rgb(74, 74, 75);
+  --blueColor: rgb(28, 153, 211);
+  --btnColor: rgba(29, 28, 28, 0.892);
+  --errColor: rgb(237, 75, 75);
+  --whiteColor: rgba(225, 217, 217, 0.891);
+  --inputsFontSize: 16px;
+  width: 200px;
+  position: relative;
+
+  margin:20px 0 0px 0;
+  border-bottom: 1px solid var(--fontColor);
+}
+
+.entrada__input{
+  border:none;
+  display: block;
+  height: 40px;
+  padding: 0px 5px;
+  margin:0
+}
+.entrada__input:focus{
+  outline: none;
+}
+.entrada__label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  pointer-events: none;
+
+  transition-property: top, font-size, color;
+  transition-duration: .3s;
+}
+
+.entrada__input:focus~.entrada__label {
+  top: -15px;
+  color: var(--blueColor);
+  font-size: 1em;
+}
+
+.sub {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.sub::before,
+.sub::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0;
+  background-color: var(--blueColor);
+  bottom: 0px;
+  transition: all .4s;
+}
+
+.sub::before {
+  right: 50%;
+}
+
+.sub::after {
+  left: 50%;
+}
+
+input:focus~.sub:before,
+input:focus~.sub:after {
+  width: 50%;
+}
+
+.notValid>.entrada__input:focus~.sub::after,
+.notValid>.entrada__input:focus~.sub::before {
+  background-color: var(--errColor);
+
+}
+
+.notValid>.entrada__input:focus~.entrada__label,
+.notValid>.entrada__input:not(:valid) {
+  color: var(--errColor);
+  top: -15px;
+}
+
+.notValid .entrada__help {
+  display: flex;
+  color: var(--errColor);
+  position: absolute;
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
